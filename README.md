@@ -1,4 +1,4 @@
-# Unity Hierarchical State Machine
+# Unity Level Editor
 
 This Unity project demonstrates a character controller based on a hierarchical state machine pattern. The controller allows a character to move, jump, and crouch within the game environment. This project is ideal for developers looking to understand state machine implementations in game development.
 
