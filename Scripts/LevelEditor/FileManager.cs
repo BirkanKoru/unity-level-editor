@@ -17,8 +17,6 @@ namespace Gametator
 
         public bool LoadDataFromLocal(int currentLevel)
         {
-            Debug.Log("CurrentLevel: " + currentLevel);
-
             //Read data from text file
             TextAsset mapText = Resources.Load("LevelData/" + currentLevel) as TextAsset;
             if (mapText == null)

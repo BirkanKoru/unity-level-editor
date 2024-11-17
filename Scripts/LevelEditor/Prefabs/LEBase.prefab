@@ -67,3 +67,7 @@ MonoBehaviour:
     itemType: 0
     itemName: Yellow
     itemIcon: {fileID: 21300000, guid: d4e87b227d64ada49b9f8698940875d9, type: 3}
+  - ID: 5
+    itemType: 1
+    itemName: Wall
+    itemIcon: {fileID: 21300000, guid: 33b1c76efcd10ba469bca1f3b879814b, type: 3}
