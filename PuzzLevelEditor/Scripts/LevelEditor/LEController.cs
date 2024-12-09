@@ -7,7 +7,7 @@ using System.IO;
 #if UNITY_EDITOR
 public class LEController : EditorWindow
 {
-    private string LevelEditorBasePrefabPath = "Assets/Scripts/LevelEditor/Prefabs/LEBase.prefab";
+    private string LevelEditorBasePrefabPath = "Assets/PuzzLevelEditor/Scripts/LevelEditor/Prefabs/LEBase.prefab";
     private LEBase LevelEditorBase;
 
     private static int selectedTab;
@@ -24,7 +24,7 @@ public class LEController : EditorWindow
     private LEItemModel selectedItemModel;
     private string selectedItemName = "";
     private LEItemType selectedItemType = LEItemType.Color;
-    private int brush;
+    private int brush = 1;
 
     // SAVE VARIABLES
     private string fileName = "1.txt";
@@ -240,6 +240,8 @@ public class LEController : EditorWindow
         {
             for(int i=0; i < LevelEditorBase.ItemModels.Count; i++)
             {
+                if(brush == i) GUI.backgroundColor = Color.green;
+
                 LEItemModel itemModel = LevelEditorBase.ItemModels[i];
 
                 if(itemModel.itemIcon != null)
@@ -258,6 +260,8 @@ public class LEController : EditorWindow
                         brush = i;
                     }
                 }
+
+                GUI.backgroundColor = Color.white;
             }
 
             GUILayout.BeginVertical();
