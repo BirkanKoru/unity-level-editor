@@ -164,6 +164,11 @@ public class LEController : EditorWindow
     {
         levelNumber++;
 
+        int maxLevel = GetLastLevel();
+
+        if(levelNumber > maxLevel)
+            levelNumber = maxLevel;
+
         if(!LoadDataFromLocal(levelNumber))
             levelNumber--;
     }
@@ -174,9 +179,7 @@ public class LEController : EditorWindow
         if(levelNumber < 1) levelNumber = 1;
 
         if (!LoadDataFromLocal(levelNumber))
-        {
             levelNumber++;
-        }
     }
     #endregion
 
